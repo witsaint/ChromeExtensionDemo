@@ -1,0 +1,11 @@
+node_modules
+lerna-debug.log
+dist/
+public/
+*.swp
+*.log
+.DS_Store
+yarn.lock
+*.swo
+*.swp
+.idea/
