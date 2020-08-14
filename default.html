@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>麻瓜</title>
+    <style>
+        html,body {
+            padding: 0;
+            margin: 0;
+            height: 100%;
+            position: relative;
+        }
+        body{
+        }
+        ul,li {margin:0;padding:0;}
+        .search-wrap{
+            position: absolute;
+            left: 50%;
+            top: 25%;
+            transform: translateX(-50%);
+        }
+        .search-wrap{
+            width: 600px;
+            height: 50px;
+            border-radius: 6px;
+            background-color: #fff;
+        }
+        .search-info-contain{
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,.18), 0 2px 4px rgba(0,0,0,.1);
+        }
+        .search-input-wrap{
+            width: 100%;
+            height: 50px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0;
+        }
+        .search-form{
+            /*border: 1px #ccc solid;*/
+            /*border-right: none;*/
+        }
+        .search-input{
+            background-color: #fff;
+            width: 486px;
+            padding: 0 10px 0 8px;
+            max-height: 30px;
+            outline: none;
+            border: 0;
+            -webkit-appearance: none;
+            box-sizing: content-box;
+            position: relative;
+            height: 40px;
+            font-size: 16px;
+        }
+        .search-btn{
+            border: none;
+            background: deeppink;
+            font-size: 17px;
+            letter-spacing: .2em;
+            color: white;
+            width: 100px;
+            height: 100%;
+            outline: none;
+            cursor: pointer;
+        }
+
+        .suggest-list{
+            box-sizing: border-box;
+            width: 600px;
+            padding: 10px  4px;
+            border-radius: 0 0 6px 6px;
+            display: none;
+            background: #FFFFFF;
+        }
+        .suggest-list-group{
+            display: flex;
+        }
+        .sub-suggest{
+            width: 50%;
+            text-overflow:ellipsis;
+            overflow:hidden;
+        }
+        .suggest-item{
+            margin: 0;
+            height: 32px;
+            margin-bottom: 3px;
+            font-size: 14px;
+            line-height: 35px;
+            color: #626675;
+            cursor: pointer;
+        }
+        .suggest-item:hover{
+            background: rgb(235, 235, 235);
+        }
+        .sa_drw{
+            margin: 0;
+            padding-left: 4px;
+        }
+        .sa_drw li:not(.sa_sg) {
+            /*display: none;*/
+        }
+        .sa_drw #sa_ans {
+            display: flex;
+            align-items: center;
+        }
+        .sa_drw #sa_ans .e_con {
+            flex-grow: 1;
+            display: flex;
+        }
+        .sa_drw #sa_ans .e_con>div {
+            display: flex;
+            cursor: pointer;
+        }
+        .sa_sg{
+            margin: 0;
+            height: 32px;
+            margin-bottom: 3px;
+            font-size: 14px;
+            line-height: 35px;
+            color: #626675;
+            cursor: pointer;
+        }
+        .sa_drw>li:hover {
+            cursor: pointer;
+            background: rgb(235, 235, 235);
+        }
+        .sa_rm{
+            display: none;
+        }
+
+        .background{
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="background" id="whale"></div>
+    <div class="search-wrap">
+        <div class="tabs"></div>
+        <div class="search-info-contain">
+            <div class="search-input-wrap">
+                <form class="search-form" >
+                    <input class="search-input" type="text" placeholder="请输入查询内容">
+                    <input style="display: none" type="text">
+                </form>
+                <button class="search-btn">查询</button>
+            </div>
+            <div class="suggest-list">
+                <div class="suggest-list-group">
+                    <div class="baidu-list sub-suggest">
+                        <!--                    <p class="suggest-item"></p>-->
+                    </div>
+                    <div class="bing-list sub-suggest"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/fetch.js"></script>
+    <script type="text/javascript" src="js/default.js"></script>
+    <script type="text/javascript" src="js/background-1.js"></script>
+</body>
+</html>
