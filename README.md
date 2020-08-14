@@ -1,2 +1,3 @@
 # ChromeExtensionDemo
-对于chrome的一些简单demo
+基于chrome插件提供的能力制作的一款带有快捷按钮、自定义新标签的默认页面的插件
+
